@@ -29,7 +29,7 @@ public class Album {
         return null;
     }
 
-    public boolean addToPlaylist(int trackNumber, LinkedList<Song> playList) {
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
         int index = trackNumber -1;
         if((index >=0) && (index <= this.listOfSongs.size())){
             playList.add(this.listOfSongs.get(index));
@@ -39,7 +39,7 @@ public class Album {
         return false;
     }
 
-    public boolean addToPlaylist(String title, LinkedList<Song> playList) {
+    public boolean addToPlayList(String title, LinkedList<Song> playList) {
        Song checkedSong = findSong(title);
         if (checkedSong != null){
             playList.add(checkedSong);
